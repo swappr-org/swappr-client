@@ -3,14 +3,14 @@ import { Button } from "antd";
 export default function Navbar() {
   return (
     <nav className="bg-white">
-      <div className="mx-auto max-w-[794px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[794px] px-4 sm:px-4 lg:px-0">
         <div className="flex h-16 items-center justify-between">
           <div className="flex-shrink-0">
             <h1 className="text-large font-bold tracking-tight text-gray-900">
               swappr
             </h1>
           </div>
-          <div className="gap flex items-center gap-3.5">
+          <div className="flex items-center gap-3.5">
             <Button
               variant="text"
               color="primary"
@@ -21,7 +21,7 @@ export default function Navbar() {
               Login
             </Button>
             <Button
-              className="!text-tertiary !font-switzer !font-medium"
+              className="!font-switzer !font-medium"
               shape="round"
               size="middle"
             >

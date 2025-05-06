@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ConfigProvider } from "antd";
+import type { ThemeConfig } from "antd";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,6 +32,12 @@ export const metadata: Metadata = {
   description: "Swappr is a phone worth calculator and exchange system",
 };
 
+const customTheme: ThemeConfig = {
+  token: {
+    colorPrimary: "#3b82fd",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -37,11 +45,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${switzer.variable} ${inter.variable} font-sans antialiased`}
-      >
-        {children}
-      </body>
+      <ConfigProvider theme={customTheme}>
+        <body
+          className={`${switzer.variable} ${inter.variable} font-sans antialiased`}
+        >
+          {children}
+        </body>
+      </ConfigProvider>
     </html>
   );
 }

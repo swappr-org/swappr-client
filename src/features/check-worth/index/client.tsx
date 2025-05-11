@@ -3,6 +3,7 @@ import "@ant-design/v5-patch-for-react-19";
 import { Button, Input, ConfigProvider } from "antd";
 import { Search } from "lucide-react";
 import DeviceCard from "@/components/others/DeviceCard";
+import Link from "next/link";
 
 const models = [
   {
@@ -81,11 +82,6 @@ export default function CheckWorth() {
         <h1 className="text-tertiary text-xlarge sm:text-xxlarge leading-[105%] font-semibold tracking-tight text-balance">
           Find out how much your phone is worth{" "}
         </h1>
-        {/* <p className="text-small mx-auto mt-3 max-w-md text-gray-500 sm:text-lg md:mt-5 md:max-w-3xl md:text-xl">
-            A secure and transparent platform for buying and swapping phones in
-            Nigeria. Our AI-powered system ensures fair deals and prevents
-            fraud.
-          </p> */}
 
         <div className="relative mx-auto my-10 h-18 max-w-md rounded-full px-2 py-2 sm:flex sm:justify-center">
           <div className="from-secondary to-primary absolute inset-0 top-5 rounded-full bg-gradient-to-r blur-2xl" />
@@ -134,7 +130,13 @@ export default function CheckWorth() {
       <section id="deals" className="mt-12">
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           {devices.map((device) => (
-            <DeviceCard device={device} key={device.id} />
+            <Link
+              key={device.id}
+              href={`/check-worth/${device.id}`}
+              className="block"
+            >
+              <DeviceCard device={device} />
+            </Link>
           ))}
         </div>
       </section>

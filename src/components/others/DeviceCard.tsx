@@ -14,14 +14,14 @@ type Props = {
 };
 
 const DeviceCard = memo(({ device }: Props) => {
-  const handleKeyPress = (event: React.KeyboardEvent, action: () => void) => {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      action();
-    }
-  };
+  // const handleKeyPress = (event: React.KeyboardEvent, action: () => void) => {
+  //   if (event.key === "Enter" || event.key === " ") {
+  //     event.preventDefault();
+  //     action();
+  //   }
+  // };
 
-  const handleClick = (id: number) => alert(`clicked ${id}`);
+  // const handleClick = (id: number) => alert(`clicked ${id}`);
 
   return (
     <Card
@@ -29,8 +29,8 @@ const DeviceCard = memo(({ device }: Props) => {
         body: { padding: "8px" },
       }}
       hoverable
-      onClick={() => handleClick(device.id)}
-      onKeyDown={(e) => handleKeyPress(e, () => handleClick(device.id))}
+      // onClick={() => handleClick(device.id)}
+      // onKeyDown={(e) => handleKeyPress(e, () => handleClick(device.id))}
       role="button"
       tabIndex={0}
       aria-label="Check worth"

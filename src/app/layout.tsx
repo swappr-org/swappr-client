@@ -15,7 +15,7 @@ const switzer = localFont({
   src: [
     {
       path: "../../public/fonts/Switzer-Variable.ttf",
-      weight: "400",
+      weight: "500",
       style: "normal",
     },
     {

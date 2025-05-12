@@ -10,7 +10,7 @@ export default function MainLayout({
   return (
     <div>
       <Navbar />
-      <main className="mx-auto min-h-screen max-w-[794px]">{children}</main>
+      <main className="mx-auto min-h-dvh max-w-[794px]">{children}</main>
     </div>
   );
 }

@@ -1,9 +1,10 @@
 "use client";
 import "@ant-design/v5-patch-for-react-19";
-import { Button, Input, ConfigProvider } from "antd";
+import { Input } from "antd";
 import { Search } from "lucide-react";
 import DeviceCard from "@/components/others/DeviceCard";
 import Link from "next/link";
+import PrimaryButton from "@/components/ui/button";
 
 const models = [
   {
@@ -100,31 +101,19 @@ export default function CheckWorth() {
       </div>
 
       <div className="scrollbar-hide mx-auto max-w-[588px] snap-x snap-mandatory overflow-x-auto py-3">
-        <ConfigProvider
-          theme={{
-            components: {
-              Button: {
-                colorPrimary: "#08161f",
-                algorithm: true,
-              },
-            },
-          }}
-        >
-          <div className="flex min-w-max items-center gap-4">
-            {models.map((model) => (
-              <div key={model.id} className="shrink-0 snap-start">
-                <Button
-                  type={model.isSelected ? "primary" : "default"}
-                  shape="round"
-                  size="large"
-                  className="!font-switzer !text-small !font-medium"
-                >
-                  {model.label}
-                </Button>
-              </div>
-            ))}
-          </div>
-        </ConfigProvider>
+        <div className="flex min-w-max items-center gap-4">
+          {models.map((model) => (
+            <div key={model.id} className="shrink-0 snap-start">
+              <PrimaryButton
+                type={model.isSelected ? "primary" : "default"}
+                shape="round"
+                size="large"
+              >
+                {model.label}
+              </PrimaryButton>
+            </div>
+          ))}
+        </div>
       </div>
 
       <section id="deals" className="mt-12">

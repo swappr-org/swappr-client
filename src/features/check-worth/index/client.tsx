@@ -78,7 +78,7 @@ const devices = [
 
 export default function CheckWorth() {
   return (
-    <div className="px-4 py-12 sm:px-6">
+    <div className="py-12 sm:px-6">
       <div className="text-center">
         <h1 className="text-tertiary text-xlarge sm:text-xxlarge leading-[105%] font-semibold tracking-tight text-balance">
           Find out how much your phone is worth{" "}

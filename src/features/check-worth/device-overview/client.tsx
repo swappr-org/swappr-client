@@ -4,6 +4,7 @@ import PrimaryButton from "@/components/ui/button";
 import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
+import { questions } from "@/data/data";
 
 const variants = [
   { id: 1, space: "64gb", isSelected: false },
@@ -26,7 +27,7 @@ export default function Client() {
   };
 
   return (
-    <div className="mx-auto mt-6 max-w-[655px] space-y-5 px-4 sm:px-0 md:space-y-10">
+    <div className="mx-auto mt-6 max-w-[655px] space-y-5 md:space-y-10">
       <div className="bg-yellow-light/10 mx-auto flex h-fit w-full max-w-[655px] items-center gap-2 rounded-lg py-2">
         <Image
           src="../assets/icons/Vector.svg"
@@ -57,7 +58,7 @@ export default function Client() {
             <PrimaryButton
               key={variant.id}
               type={variant.isSelected ? "primary" : "default"}
-              size="middle"
+              size="large"
               shape="round"
               onClick={() => handleSelect(variant.id)}
             >
@@ -67,7 +68,7 @@ export default function Client() {
         </div>
       </div>
 
-      <Link href="/check-worth/assessment/q1">
+      <Link href={`/check-worth/form/${questions[0].slug}`}>
         <PrimaryButton type="primary" size="large" shape="round" fullWidth>
           Check your phones worth{" "}
         </PrimaryButton>

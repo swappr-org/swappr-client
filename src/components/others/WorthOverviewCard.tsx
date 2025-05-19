@@ -15,7 +15,7 @@ export default function WorthOverviewCard() {
       </div>
 
       <div className="space-y-2 sm:space-y-3 sm:self-end">
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap items-center gap-5">
           <div className="flex flex-col">
             <span className="text-tertiary/[42%] text-sm font-medium tracking-tight">
               Brand
@@ -38,7 +38,7 @@ export default function WorthOverviewCard() {
           <span className="text-tertiary/[42%] text-sm font-medium tracking-tight">
             From
           </span>
-          <span className="text-tertiary text-3xl font-medium tracking-tight sm:text-3xl">
+          <span className="text-tertiary text-3xl font-semibold tracking-tight sm:text-3xl">
             N 950,000.00
           </span>
         </div>

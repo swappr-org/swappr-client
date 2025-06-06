@@ -105,7 +105,7 @@ export const questions: Question[] = [
     options: [
       { label: "Important Display Message (IDM)", value: "idm" },
       { label: "Important Battery Message (IBM)", value: "ibm" },
-      { label: "Nah, it doesn't", value: "none" },
+      { label: "Nope, it doesn't", value: "none" },
     ],
     note: "Select all that applies",
   },
@@ -124,7 +124,7 @@ export const questions: Question[] = [
     id: "q10",
     label: "Which parts of your phone are faulty?",
     slug: "device-damages",
-    type: "multi-select",
+    type: "damages",
     required: false,
     options: [
       { label: "Screen", value: "screen" },
@@ -133,7 +133,8 @@ export const questions: Question[] = [
       { label: "Battery", value: "battery" },
       { label: "Speakers", value: "speakers" },
       { label: "Charging Port", value: "charging_port" },
-      { label: "Other", value: "other" },
+      { label: "Power button", value: "power_button" },
+      { label: "Action Button", value: "action_button" },
     ],
     note: "Select all the Faulty parts of your device",
   },

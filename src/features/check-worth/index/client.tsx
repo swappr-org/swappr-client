@@ -4,7 +4,7 @@ import { Input } from "antd";
 import { Search } from "lucide-react";
 import DeviceCard from "@/components/others/DeviceCard";
 import Link from "next/link";
-import PrimaryButton from "@/components/ui/button";
+import PrimaryButton from "@/components/others/primary-button";
 
 const models = [
   {

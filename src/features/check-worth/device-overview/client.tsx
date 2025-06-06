@@ -1,6 +1,6 @@
 "use client";
 import WorthOverviewCard from "@/components/others/WorthOverviewCard";
-import PrimaryButton from "@/components/ui/button";
+import PrimaryButton from "@/components/others/primary-button";
 import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";

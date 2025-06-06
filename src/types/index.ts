@@ -12,7 +12,7 @@ export type Question = {
   id: string;
   label: string;
   slug: string;
-  type: "text" | "radio" | "select" | "multi-select" | "range";
+  type: "text" | "radio" | "select" | "multi-select" | "range" | "damages";
   required?: boolean;
   options?: Option[];
   dependsOn?: Dependency;
@@ -22,3 +22,5 @@ export type Question = {
 export type QuestionsType = {
   questions: Question[];
 };
+
+export type DamagesType = Record<string, boolean>;

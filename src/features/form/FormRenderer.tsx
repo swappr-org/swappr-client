@@ -1,8 +1,8 @@
 import React from "react";
 import { Question } from "@/types";
-import Radio from "@/components/form/radio";
-import Select from "@/components/form/select";
 import Range from "@/components/form/range";
+import ToggleSelect from "@/components/form/ToggleSelect";
+import DamagesSelector from "@/components/form/damages-selector";
 
 interface FormRendererProps {
   question: Question;
@@ -15,11 +15,25 @@ export default function FormRenderer({
 }: FormRendererProps) {
   switch (question.type) {
     case "select":
-      return <Select onAnswer={onAnswer} />;
+      return (
+        <ToggleSelect
+          type="multiple"
+          labelLengthThreshold={15}
+          onAnswer={onAnswer}
+        />
+      );
     case "radio":
-      return <Radio onAnswer={onAnswer} />;
+      return (
+        <ToggleSelect
+          type="single"
+          labelLengthThreshold={20}
+          onAnswer={onAnswer}
+        />
+      );
     case "range":
       return <Range />;
+    case "damages":
+      return <DamagesSelector />;
     default:
       return null;
   }

@@ -11,7 +11,7 @@ interface FormRendererProps {
 
 export default function FormRenderer({
   question,
-  onAnswer,
+  // onAnswer,
 }: FormRendererProps) {
   switch (question.type) {
     case "select":
@@ -19,7 +19,7 @@ export default function FormRenderer({
         <ToggleSelect
           type="multiple"
           labelLengthThreshold={15}
-          onAnswer={onAnswer}
+          // onAnswer={onAnswer}
         />
       );
     case "radio":
@@ -27,7 +27,7 @@ export default function FormRenderer({
         <ToggleSelect
           type="single"
           labelLengthThreshold={20}
-          onAnswer={onAnswer}
+          // onAnswer={onAnswer}
         />
       );
     case "range":

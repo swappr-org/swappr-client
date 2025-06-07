@@ -1,6 +1,6 @@
 "use client";
 import WorthOverviewCard from "@/components/others/WorthOverviewCard";
-import PrimaryButton from "@/components/others/primary-button";
+import PrimaryButton from "@/components/others/PrimaryButton";
 import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
@@ -69,7 +69,13 @@ export default function Client() {
       </div>
 
       <Link href={`/check-worth/form/${questions[0].slug}`}>
-        <PrimaryButton type="primary" size="large" shape="round" fullWidth>
+        <PrimaryButton
+          type="primary"
+          size="large"
+          shape="round"
+          fullWidth
+          className=""
+        >
           Check your phones worth{" "}
         </PrimaryButton>
       </Link>

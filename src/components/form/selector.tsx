@@ -31,7 +31,7 @@ export default function Selector({
       <motion.button
         layout
         className={cn(
-          "border-input bg-gray-light flex h-13 items-center gap-2 border px-4 text-[15px] font-medium text-slate-500 sm:h-[54px] sm:text-lg",
+          "border-input bg-gray-light flex h-13 cursor-pointer items-center gap-2 border px-4 text-[15px] font-medium text-slate-500 sm:h-[54px] sm:text-lg",
           isSelected
             ? "border-tertiary text-tertiary border-2"
             : "hover:bg-accent hover:text-accent-foreground",

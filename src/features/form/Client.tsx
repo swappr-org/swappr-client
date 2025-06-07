@@ -44,8 +44,9 @@ export default function FormStep() {
       </div>
       <div className="mt-6 flex justify-center">
         <Button
-          className="h-16 w-[250px] rounded-full text-white"
+          className="h-16 w-[250px] cursor-pointer rounded-full text-white"
           onClick={handleNext}
+          variant="custom"
         >
           OK
         </Button>

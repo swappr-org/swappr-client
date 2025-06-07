@@ -23,4 +23,9 @@ export type QuestionsType = {
   questions: Question[];
 };
 
+export type Answer = {
+  questionId: string;
+  value: string | string[];
+};
+
 export type DamagesType = Record<string, boolean>;

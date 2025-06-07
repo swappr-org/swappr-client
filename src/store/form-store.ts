@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { questions } from "@/data/data";
 import { getNextSlug, getQuestionBySlug } from "@/utils/formHelpers";
-import { Question } from "@/types";
+import { Question, Answer } from "@/types";
 
 interface FormState {
   currentStep: number;
@@ -36,7 +36,7 @@ export const useFormStore = create<FormState>((set, get) => ({
   },
 
   nextStep: () => {
-    const { currentStep, currentQuestion } = get();
+    const { currentQuestion } = get();
     if (!currentQuestion) return;
 
     const nextSlug = getNextSlug(currentQuestion.slug, questions);

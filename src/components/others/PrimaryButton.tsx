@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, ConfigProvider } from "antd";
+import { cn } from "@/lib/utils";
 
 type ButtonProps = {
   type: "link" | "text" | "primary" | "dashed" | "default";
@@ -8,6 +9,7 @@ type ButtonProps = {
   children: React.ReactNode;
   onClick?: () => void;
   fullWidth?: boolean;
+  className?: string;
 };
 
 export default function PrimaryButton({
@@ -17,6 +19,7 @@ export default function PrimaryButton({
   children,
   onClick,
   fullWidth,
+  className,
 }: ButtonProps) {
   return (
     <ConfigProvider
@@ -33,7 +36,10 @@ export default function PrimaryButton({
         type={type ? type : "default"}
         shape={shape ? shape : "default"}
         size={size ? size : "middle"}
-        className={`${fullWidth && "!w-full"} !font-switzer !text-small !font-medium`}
+        className={cn(
+          `${fullWidth && "!w-full"} !font-switzer !text-small !font-medium`,
+          className,
+        )}
         onClick={onClick}
       >
         {children}
